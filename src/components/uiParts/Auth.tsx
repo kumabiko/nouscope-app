@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -7,213 +6,54 @@ export const Auth = () => {
 
   return (
     <>
-    <div className='flex justify-center items-center py-12 px-4 min-h-full bg-[#F4F7FF] sm:px-6 lg:px-8'>
-    <div className='space-y-8 w-full max-w-md'>
-      <section className='py-20 lg:py-[120px]'>
-        <div className='container'>
-            <div className='flex flex-wrap -mx-4'>
-              <div className='px-4 w-full'>
-                  <div className='
-                    overflow-hidden
-                    relative
-                    py-16
-                    px-10
-                    mx-auto
-                    max-w-[525px]
-                    text-center
-                    bg-white
-                    rounded-lg
-                    sm:px-12
-                    md:px-[60px]'
-                  >
-                    <div className='mb-10 text-center md:mb-16'>
-                      <a href='javascript:void(0)' className='inline-block mx-auto max-w-[160px]'>
-                        <Image
-                          className='mx-auto w-auto h-12'
-                          src='/images/nouscope.png'
-                          alt='nouscope'
-                          width={50}
-                          height={50}
-                        />
-                      </a>
-                    </div>
-                    <form>
-                        <div className='mb-6'>
-                          <input
-                              name='username'
-                              type='text'
-                              autoComplete='username'
-                              placeholder='Username'
-                              className='
-                              py-3
-                              px-5
-                              w-full
-                              bg-[#FCFDFE]
-                              rounded-md
-                              border
-                              focus:border-primary
-                              outline-none
-                              focus-visible:shadow-none
-                              bordder-[#E9EDF4]
-                              text-base text-body-color
-                              placeholder-[#ACB6BE]
-                              '
-                            />
-                        </div>
-                        <div className='mb-6'>
-                          <input
-                              name='password'
-                              type='password'
-                              placeholder='Password'
-                              autoComplete='current-password'
-                              className='
-                              py-3
-                              px-5
-                              w-full
-                              bg-[#FCFDFE]
-                              rounded-md
-                              border
-                              focus:border-primary
-                              outline-none
-                              focus-visible:shadow-none
-                              bordder-[#E9EDF4]
-                              text-base text-body-color
-                              placeholder-[#ACB6BE]
-                              '
-                              />
-                        </div>
+      <div className="py-6 bg-white sm:py-8 lg:py-12">
+        <div className="px-4 mx-auto max-w-screen-2xl md:px-8">
+          <h2 className="mb-4 text-2xl font-bold text-center text-gray-800 md:mb-8 lg:text-3xl">Login</h2>
 
-                        <div className='mb-10'>
-                          <button
-                              type='submit'
-                              className='
-                              py-3
-                              px-5
-                              w-full
-                              bg-primary
-                              hover:bg-opacity-90
-                              rounded-md
-                              border
-                              transition
-                              cursor-pointer
-                              bordder-primary
-                              text-base text-white
-                              '
-                              onClick={() => router.push('/home')}>
-                                Sign in
-                              </button>
-                        </div>
-                    </form>
-                    {/* <p className='mb-6 text-base text-[#adadad]'>Connect With</p>
-                    <ul className='flex justify-between -mx-2 mb-12'>
-                        <li className='px-2 w-full'>
-                          <a
-                              href='javascript:void(0)'
-                              className='
-                              flex
-                              justify-center
-                              items-center
-                              h-11
-                              bg-[#4064AC]
-                              hover:bg-opacity-90
-                              rounded-md
-                              '
-                              >
-                              <svg
-                                width='10'
-                                height='20'
-                                viewBox='0 0 10 20'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'
-                                >
-                                <path
-                                    d='M9.29878 8H7.74898H7.19548V7.35484V5.35484V4.70968H7.74898H8.91133C9.21575 4.70968 9.46483 4.45161 9.46483 4.06452V0.645161C9.46483 0.290323 9.24343 0 8.91133 0H6.89106C4.70474 0 3.18262 1.80645 3.18262 4.48387V7.29032V7.93548H2.62912H0.747223C0.359774 7.93548 0 8.29032 0 8.80645V11.129C0 11.5806 0.304424 12 0.747223 12H2.57377H3.12727V12.6452V19.129C3.12727 19.5806 3.43169 20 3.87449 20H6.47593C6.64198 20 6.78036 19.9032 6.89106 19.7742C7.00176 19.6452 7.08478 19.4194 7.08478 19.2258V12.6774V12.0323H7.66596H8.91133C9.2711 12.0323 9.54785 11.7742 9.6032 11.3871V11.3548V11.3226L9.99065 9.09677C10.0183 8.87097 9.99065 8.6129 9.8246 8.35484C9.76925 8.19355 9.52018 8.03226 9.29878 8Z'
-                                    fill='white'
-                                    />
-                              </svg>
-                          </a>
-                        </li>
-                        <li className='px-2 w-full'>
-                          <a
-                              href='javascript:void(0)'
-                              className='
-                              flex
-                              justify-center
-                              items-center
-                              h-11
-                              bg-[#1C9CEA]
-                              hover:bg-opacity-90
-                              rounded-md
-                              '
-                              >
-                              <svg
-                                width='22'
-                                height='16'
-                                viewBox='0 0 22 16'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'
-                                >
-                                <path
-                                    d='M19.5516 2.75538L20.9 1.25245C21.2903 0.845401 21.3968 0.53229 21.4323 0.375734C20.3677 0.939335 19.3742 1.1272 18.7355 1.1272H18.4871L18.3452 1.00196C17.4935 0.344423 16.429 0 15.2935 0C12.8097 0 10.8581 1.81605 10.8581 3.91389C10.8581 4.03914 10.8581 4.22701 10.8935 4.35225L11 4.97847L10.2548 4.94716C5.7129 4.82192 1.9871 1.37769 1.38387 0.782779C0.390323 2.34834 0.958064 3.85127 1.56129 4.79061L2.76774 6.54403L0.851613 5.6047C0.887097 6.91977 1.45484 7.95303 2.55484 8.7045L3.5129 9.33072L2.55484 9.67515C3.15806 11.272 4.50645 11.9296 5.5 12.18L6.8129 12.4932L5.57097 13.2446C3.58387 14.4971 1.1 14.4031 0 14.3092C2.23548 15.6869 4.89677 16 6.74194 16C8.12581 16 9.15484 15.8748 9.40322 15.7808C19.3387 13.7143 19.8 5.8865 19.8 4.32094V4.10176L20.0129 3.97652C21.2194 2.97456 21.7161 2.44227 22 2.12916C21.8935 2.16047 21.7516 2.22309 21.6097 2.2544L19.5516 2.75538Z'
-                                    fill='white'
-                                    />
-                              </svg>
-                          </a>
-                        </li>
-                        <li className='px-2 w-full'>
-                          <a
-                              href='javascript:void(0)'
-                              className='
-                              flex
-                              justify-center
-                              items-center
-                              h-11
-                              bg-[#D64937]
-                              hover:bg-opacity-90
-                              rounded-md
-                              '
-                              >
-                              <svg
-                                width='18'
-                                height='18'
-                                viewBox='0 0 18 18'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'
-                                >
-                                <path
-                                    d='M17.8477 8.17132H9.29628V10.643H15.4342C15.1065 14.0743 12.2461 15.5574 9.47506 15.5574C5.95916 15.5574 2.8306 12.8821 2.8306 9.01461C2.8306 5.29251 5.81018 2.47185 9.47506 2.47185C12.2759 2.47185 13.9742 4.24567 13.9742 4.24567L15.7024 2.47185C15.7024 2.47185 13.3783 0.000145544 9.35587 0.000145544C4.05223 -0.0289334 0 4.30383 0 8.98553C0 13.5218 3.81386 18 9.44526 18C14.4212 18 17.9967 14.7141 17.9967 9.79974C18.0264 8.78198 17.8477 8.17132 17.8477 8.17132Z'
-                                    fill='white'
-                                    />
-                              </svg>
-                          </a>
-                        </li>
-                    </ul>
-                    <a
-                        href='javascript:void(0)'
-                        className='
-                        inline-block
-                        mb-2
-                        text-base
-                        text-[#adadad]
-                        hover:underline hover:text-primary
-                        '
-                        >
-                    Forget Password?
-                    </a> */}
-                    <p className='text-base text-[#adadad]'>
-                        Not a member yet?
-                        <a href='javascript:void(0)' className='text-primary hover:underline'>
-                        Sign Up
-                        </a>
-                    </p>
-                    <div>
-                    </div>
-                  </div>
+          <form className="mx-auto max-w-lg rounded-lg border">
+            <div className="flex flex-col gap-4 p-4 md:p-8">
+              <div>
+                <label htmlFor="username" className="inline-block mb-2 text-sm text-gray-800 sm:text-base">Username</label>
+                <input name="username" className="py-2 px-3 w-full text-gray-800 bg-gray-50 rounded border outline-none focus:ring ring-indigo-300 transition duration-100" />
               </div>
+
+              <div>
+                <label htmlFor="password" className="inline-block mb-2 text-sm text-gray-800 sm:text-base">Password</label>
+                <input name="password" className="py-2 px-3 w-full text-gray-800 bg-gray-50 rounded border outline-none focus:ring ring-indigo-300 transition duration-100" />
+              </div>
+
+              <button className="block py-3 px-8 text-sm font-semibold text-center text-white bg-gray-800 hover:bg-gray-700 active:bg-gray-600 rounded-lg outline-none focus-visible:ring ring-gray-300 transition duration-100 md:text-base">Log in</button>
+
+              <div className="flex relative justify-center items-center">
+                <span className="absolute inset-x-0 h-px bg-gray-300"></span>
+                <span className="relative px-4 text-sm text-gray-400 bg-white">Log in with social</span>
+              </div>
+
+              <button className="flex gap-2 justify-center items-center py-3 px-8 text-sm font-semibold text-center text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 rounded-lg outline-none focus-visible:ring ring-blue-300 transition duration-100 md:text-base">
+                <svg className="shrink-0 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.37273 0 0 5.37273 0 12C0 18.0164 4.43182 22.9838 10.2065 23.8516V15.1805H7.23764V12.0262H10.2065V9.92727C10.2065 6.45218 11.8996 4.92655 14.7878 4.92655C16.1711 4.92655 16.9025 5.02909 17.2489 5.076V7.82945H15.2787C14.0525 7.82945 13.6244 8.99182 13.6244 10.302V12.0262H17.2178L16.7302 15.1805H13.6244V23.8773C19.4815 23.0825 24 18.0747 24 12C24 5.37273 18.6273 0 12 0Z" fill="white" />
+                </svg>
+
+                Continue with Facebook
+              </button>
+
+              <button className="flex gap-2 justify-center items-center py-3 px-8 text-sm font-semibold text-center text-gray-800 bg-white hover:bg-gray-100 active:bg-gray-200 rounded-lg border border-gray-300 outline-none focus-visible:ring ring-gray-300 transition duration-100 md:text-base">
+                <svg className="shrink-0 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.7449 12.27C23.7449 11.48 23.6749 10.73 23.5549 10H12.2549V14.51H18.7249C18.4349 15.99 17.5849 17.24 16.3249 18.09V21.09H20.1849C22.4449 19 23.7449 15.92 23.7449 12.27Z" fill="#4285F4" />
+                  <path d="M12.2549 24C15.4949 24 18.2049 22.92 20.1849 21.09L16.3249 18.09C15.2449 18.81 13.8749 19.25 12.2549 19.25C9.12492 19.25 6.47492 17.14 5.52492 14.29H1.54492V17.38C3.51492 21.3 7.56492 24 12.2549 24Z" fill="#34A853" />
+                  <path d="M5.52488 14.29C5.27488 13.57 5.14488 12.8 5.14488 12C5.14488 11.2 5.28488 10.43 5.52488 9.71V6.62H1.54488C0.724882 8.24 0.254883 10.06 0.254883 12C0.254883 13.94 0.724882 15.76 1.54488 17.38L5.52488 14.29Z" fill="#FBBC05" />
+                  <path d="M12.2549 4.75C14.0249 4.75 15.6049 5.36 16.8549 6.55L20.2749 3.13C18.2049 1.19 15.4949 0 12.2549 0C7.56492 0 3.51492 2.7 1.54492 6.62L5.52492 9.71C6.47492 6.86 9.12492 4.75 12.2549 4.75Z" fill="#EA4335" />
+                </svg>
+
+                Continue with Google
+              </button>
             </div>
+
+            <div className="flex justify-center items-center p-4 bg-gray-100">
+              <p className="text-sm text-center text-gray-500">Don&apos;t have an account? <a href="#" className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Register</a></p>
+            </div>
+          </form>
         </div>
-      </section>
-      </div>
       </div>
     </>
   );
