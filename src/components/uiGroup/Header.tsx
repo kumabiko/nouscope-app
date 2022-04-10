@@ -1,19 +1,22 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { AiFillBell } from 'react-icons/ai';
 
 export const Header = () => {
   return (
-    <div className='flex sticky top-0 z-50 justify-between items-center py-2 px-4 bg-white shadow-md'>
-      {/* Left */}
-      <div className='flex items-center'>
-        <Image 
-          alt='product'
-          src = '/images/nouscope.png'
-          width={30}
-          height={30}
-          layout='fixed'
-        /> 
-      </div>
+    <div className='flex sticky top-0 z-50 justify-between items-center py-1 px-4 bg-white shadow-md'>
+      <Link href ={'/home'} passHref >
+        <button className="flex items-center py-2 space-x-3 text-xl font-bold text-primary rounded">
+          <Image 
+            alt='product'
+            src = '/images/nouscope.png'
+            width={30}
+            height={30}
+            layout='fixed'
+          /> 
+          <span>nouscope</span>
+        </button> 
+      </Link>
     
 
       {/* Center */}
