@@ -99,21 +99,19 @@ export const SideBar= () => {
   },[]);
 
   return (
-    <div className=' bg-primary' >
-      <motion.div animate={controls} className='group flex relative flex-col py-10 max-w-[250px] h-full border-r animate' >
+    <div className=' bg-white' >
+      <motion.div animate={controls} className=' flex relative flex-col py-10 max-w-[250px] h-full border-r animate' >
 
         <div className='grow'>
           {data.map((group, index) => (
             <div key={index} className='my-2' >
-              <motion.p animate={controlTitleText} className='mb-2 ml-4 text-lg font-bold text-gray-500' >{group.name}</motion.p>
+              <motion.p animate={controlTitleText} className='mb-2 ml-4 text-lg font-bold text-gray-600' >{group.name}</motion.p>
 
               {group.items.map((item, index2) => (
                 <Link href ={item.url} passHref key={index2} >
-                  <div className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer'>
-                    
-                      <item.icon className=' text-theme-light' size={30} />
-                      <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
-                    
+                  <div className='group flex items-center py-2 px-4 hover:bg-primary rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer'>
+                      <item.icon className=' text-gray-600 group-hover:text-white' size={30} />
+                      <motion.span animate={controlText} className='ml-4 font-bold text-gray-600 group-hover:text-white' > {item.title}</motion.span>  
                   </div>
                 </Link>
 
@@ -127,9 +125,9 @@ export const SideBar= () => {
               <motion.p animate={controlTitleText} className='mb-2 ml-4 text-lg font-bold text-gray-500' >{group.name}</motion.p>
 
               {group.items.map((item, index2) => (
-                <div key={index2} className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer' >
-                  <item.icon className='text-theme-light' size={30} />
-                  <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
+                <div key={index2} className='group flex items-center py-2 px-4 hover:bg-primary rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer' >
+                  <item.icon className='text-gray-600 group-hover:text-white' size={30} />
+                  <motion.span animate={controlText} className='ml-4 font-bold text-gray-500 group-hover:text-white' > {item.title}</motion.span>
                 </div>
 
               ))}
@@ -137,12 +135,9 @@ export const SideBar= () => {
           ))}
         </div>
         {/* サイドバーの開閉 */}
-        {active && <BiLeftArrow onClick={showLess} className='ml-4 text-3xl text-white hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
-        {!active && <BiRightArrow onClick={showMore} className='ml-4 text-3xl text-white hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
+        {active && <BiLeftArrow onClick={showLess} className='ml-4 text-3xl text-gray-600 hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
+        {!active && <BiRightArrow onClick={showMore} className='ml-4 text-3xl text-gray-600 hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
       </motion.div>
-        
-        
-
     </div>
   );
 };
