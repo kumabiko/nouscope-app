@@ -22,6 +22,7 @@ export const Auth = () => {
                 <input name="password" className="py-2 px-3 w-full text-gray-800 bg-gray-50 rounded border outline-none focus:ring ring-indigo-300 transition duration-100" />
               </div>
 
+              {/* ログインボタン */}
               <button className="block py-3 px-8 text-sm font-semibold text-center text-white bg-gray-800 hover:bg-gray-700 active:bg-gray-600 rounded-lg outline-none focus-visible:ring ring-gray-300 transition duration-100 md:text-base">Log in</button>
 
               <div className="flex relative justify-center items-center">
