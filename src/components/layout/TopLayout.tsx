@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { FaBookOpen } from 'react-icons/fa';
+import { GiStairs } from 'react-icons/gi';
+import { IoTelescope } from 'react-icons/io5';
 
 export const TopLayout = () => {
   const router = useRouter();
@@ -40,7 +43,7 @@ export const TopLayout = () => {
             {/* nav - end  */}
 
             {/* buttons - start */}
-            <a href="#" className="hidden py-3 px-8 text-sm font-semibold text-center text-gray-500 active:text-gray-700 bg-gray-200 hover:bg-gray-300 rounded-lg outline-none focus-visible:ring ring-indigo-300 transition duration-100 md:text-base lg:inline-block">ログイン</a>
+            <a href="login" className="hidden py-3 px-8 text-sm font-semibold text-center text-gray-500 active:text-gray-700 bg-gray-200 hover:bg-gray-300 rounded-lg outline-none focus-visible:ring ring-indigo-300 transition duration-100 md:text-base lg:inline-block">ログイン</a>
 
             <button type="button" className="inline-flex gap-2 items-center py-2 px-2.5 text-sm font-semibold text-gray-500 active:text-gray-700 bg-gray-200 hover:bg-gray-300 rounded-lg focus-visible:ring ring-indigo-300 md:text-base lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
@@ -92,9 +95,7 @@ export const TopLayout = () => {
             {/*feature - start  */}
             <div className="flex gap-4 md:gap-6">
               <div className="flex shrink-0 justify-center items-center w-12 h-12 text-white bg-primary rounded-lg shadow-lg md:w-14 md:h-14 md:rounded-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
+                <IoTelescope size={30} />
               </div>
 
               <div>
@@ -108,9 +109,7 @@ export const TopLayout = () => {
             {/*feature - start  */}
             <div className="flex gap-4 md:gap-6">
               <div className="flex shrink-0 justify-center items-center w-12 h-12 text-white bg-primary rounded-lg shadow-lg md:w-14 md:h-14 md:rounded-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+                <FaBookOpen size={30} />
               </div>
 
               <div>
@@ -124,9 +123,7 @@ export const TopLayout = () => {
             {/*feature - start  */}
             <div className="flex gap-4 md:gap-6">
               <div className="flex shrink-0 justify-center items-center w-12 h-12 text-white bg-primary rounded-lg shadow-lg md:w-14 md:h-14 md:rounded-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
+                <GiStairs size={30} />
               </div>
 
               <div>
