@@ -59,7 +59,7 @@ export const SideBar= () => {
 
   const showMore = () => {
     void controls.start({
-      width: '200px',
+      width: '180px',
       transition: { duration: 0.001 }
     });
     void controlText.start({

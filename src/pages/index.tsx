@@ -1,11 +1,11 @@
-import { Auth } from "@/components/uiParts/Auth";
+import { TopLayout } from "@/components/layout/TopLayout";
 
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Top: NextPage = () => {
   return (
-      <Auth />
+      <TopLayout />
   );
 };
 
-export default Home;
+export default Top;
